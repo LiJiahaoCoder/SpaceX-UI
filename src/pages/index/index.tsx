@@ -1,5 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import createEarth from '../../components/earth';
+import Hud from '../../components/hud';
 
 export default function Index () {
-  return <h1>Index Page</h1>;
+  useEffect(() => {
+    createEarth();
+  }, []);
+
+  return <>
+    <Hud />
+  </>;
 }
