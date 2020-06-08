@@ -1,0 +1,26 @@
+{
+  "name": "space-x-ui",
+  "version": "1.0.0",
+  "description": "Simulate SpaceX UI with React and ThreeJS",
+  "main": "src/index.ts",
+  "scripts": {
+    "clean": "rm -rf dist/ .cache/",
+    "start": "yarn clean && parcel src/index.html --open"
+  },
+  "author": "Jiahao Li",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "autoprefixer": "^9.8.0",
+    "parcel-bundler": "^1.12.4",
+    "postcss-nested": "^4.2.1",
+    "sass": "^1.26.8",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
