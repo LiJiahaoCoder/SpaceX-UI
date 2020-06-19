@@ -58,18 +58,18 @@ function createEarth (): Mesh {
   texture.wrapT = ClampToEdgeWrapping;
 
   // create sphere
-  const geometry = new SphereGeometry( 50, 32, 32 );
+  const geometry = new SphereGeometry( 65, 32, 32 );
   const material = new MeshPhongMaterial({ map: texture });
 
   sphere =  new Mesh( geometry, material );
-  sphere.position.set( 0, -60, 0 );
+  sphere.position.set( -10, -50, 0 );
 
   return sphere;
 }
 
 function createLight (): DirectionalLight {
   const light = new DirectionalLight( 0xffffff );
-  light.position.set( -1, 1, 1 ).normalize();
+  light.position.set( 1, 1, 1 ).normalize();
 
   return light;
 }
@@ -120,8 +120,8 @@ function createStars () {
 function animate (): void {
   requestAnimationFrame( animate );
 
-  sphere.rotation.x += 0.0005;
-  sphere.rotation.y += 0.001;
+  sphere.rotation.x += 0.00005;
+  sphere.rotation.y += 0.0001;
 
   renderer.render( scene, camera );
 }
