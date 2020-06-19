@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import {
   Camera,
   ClampToEdgeWrapping,
@@ -19,12 +19,12 @@ import styles from './index.scss';
 const width = 150;
 const height = 150;
 
-let camera: Camera;
-let scene: Scene;
-let renderer: Renderer;
-let sphere: Mesh;
-
 export default function Navball () {
+  let camera: Camera;
+  let scene: Scene;
+  let renderer: Renderer;
+  let sphere: Mesh;
+
   function initializeCanvas (): void {
     renderer = new WebGLRenderer( { antialias: true, alpha: true } );
 
@@ -69,10 +69,10 @@ export default function Navball () {
     return light;
   }
 
-  function render (): void {
+  const render = useCallback(() => {
     requestAnimationFrame( render );
     renderer.render( scene, camera );
-  }
+  }, []);
 
   useEffect(() => {
     initializeCanvas();
