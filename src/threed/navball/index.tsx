@@ -16,8 +16,8 @@ import {
 import navballTexture from '../../assets/navball.png';
 import styles from './index.scss';
 
-const width = 150;
-const height = 150;
+const width = 200;
+const height = 200;
 
 export default function Navball () {
   let camera: Camera;
@@ -36,7 +36,7 @@ export default function Navball () {
   function initializeScene (): void {
     // create camera
     camera = new PerspectiveCamera( 70, width / height, 0.01, 1000 );
-    camera.position.set(0, 0, 50);
+    camera.position.set(0, 0, 25);
     // create scene
     scene = new Scene();
 
@@ -52,17 +52,18 @@ export default function Navball () {
     texture.wrapT = ClampToEdgeWrapping;
 
     // create sphere
-    const geometry = new SphereGeometry( 25, 32, 32 );
+    const geometry = new SphereGeometry( 13, 32, 32 );
     const material = new MeshPhongMaterial({ map: texture });
 
     sphere =  new Mesh( geometry, material );
     sphere.position.set( 0, 0, 0 );
+    sphere.rotation.set( Math.PI / 2, -Math.PI / 10, Math.PI / 1.8 );
 
     return sphere;
   }
 
   function createLight (): DirectionalLight {
-    const light = new DirectionalLight( 0xffffff );
+    const light = new DirectionalLight( 0xaaaaaa );
     light.position.set( 1, 1, 1 ).normalize();
     light.intensity = 1.5;
 
