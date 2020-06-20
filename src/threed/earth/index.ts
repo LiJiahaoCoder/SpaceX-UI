@@ -24,6 +24,12 @@ let scene: Scene;
 let renderer: Renderer;
 let sphere: Mesh;
 
+export const INIT_POSITION_OF_CAMERA = {
+  x: 0,
+  y: 0,
+  z: 50,
+};
+
 export default function earth (): Camera {
   initializeCanvas();
   initializeScene();
@@ -41,9 +47,10 @@ function initializeCanvas (): void {
 }
 
 function initializeScene (): void {
+  const { x, y, z } = INIT_POSITION_OF_CAMERA;
   // create camera
   camera = new PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 1000 );
-  camera.position.set(0, 0, 50);
+  camera.position.set(x, y, z);
   // create scene
   scene = new Scene();
 

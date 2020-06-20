@@ -12,11 +12,12 @@ import {
 import styles from './index.scss';
 
 interface IProps {
-  handleTranslate: () => void;
-  handleRotate: (x: number, y: number) => void;
+  handleTranslate: ( x: number, y: number, z: number ) => void;
+  handleRotate: ( x: number, y: number ) => void;
 }
 
 export const ANGLE = 0.005;
+const DISTANCE = 0.05;
 
 export default function ControlRod ({ handleRotate, handleTranslate }: IProps) {
 
@@ -52,25 +53,25 @@ export default function ControlRod ({ handleRotate, handleTranslate }: IProps) {
     <div className={`${styles.rod} ${styles['translation-rod']}`}>
       <div
         className={`${styles.btn} ${styles['hor-btn']} ${styles.up}`}
-        onClick={handleTranslate}
+        onClick={() => handleTranslate( 0, 0, -DISTANCE )}
       >
         <TransUpArrow />
       </div>
       <div
         className={`${styles.btn} ${styles['ver-btn']} ${styles.right}`}
-        onClick={handleTranslate}
+        onClick={() => handleTranslate( DISTANCE, 0, 0 )}
       >
         <TransRightArrow />
       </div>
       <div
         className={`${styles.btn} ${styles['hor-btn']} ${styles.bottom}`}
-        onClick={handleTranslate}
+        onClick={() => handleTranslate( 0, 0, DISTANCE )}
       >
         <TransDownArrow />
       </div>
       <div
         className={`${styles.btn} ${styles['ver-btn']} ${styles.left}`}
-        onClick={handleTranslate}
+        onClick={() => handleTranslate( -DISTANCE, 0, 0 )}
       >
         <TransLeftArrow />
       </div>

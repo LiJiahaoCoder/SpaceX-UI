@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Camera } from 'three';
 import ControlRod, { ANGLE } from '../../components/controlRod';
 import Hud from '../../components/hud';
-import createEarth from '../../threed/earth';
+import createEarth, { INIT_POSITION_OF_CAMERA } from '../../threed/earth';
 import Navball from '../../threed/navball';
 
 let camera: Camera;
@@ -14,7 +14,7 @@ const IITIAL_NAVBALL_ROTATION = {
 
 export default function Index () {
   const [ rotation, setRotation ] = useState({ x: 0, y: 0, z: 0 });
-  const [ translation, setTranslation ] = useState({ x: 0, y: 0, z: 0 });
+  const [ translation, setTranslation ] = useState( INIT_POSITION_OF_CAMERA );
   const [ navballRotation, setNavballRotation ] = useState( IITIAL_NAVBALL_ROTATION );
 
   useEffect(() => {
@@ -35,7 +35,11 @@ export default function Index () {
     camera.rotation.set( rotation.x, rotation.y, rotation.z );
   }, [ rotation ]);
 
-  function handleRotate (x: number, y: number) {
+  useEffect(() => {
+    camera.position.set( translation.x, translation.y, translation.z );
+  }, [ translation ]);
+
+  function handleRotate ( x: number, y: number ) {
     setRotation(pre => ({
       x: pre.x + x,
       y: pre.y + y,
@@ -49,8 +53,12 @@ export default function Index () {
     }));
   }
 
-  function handleTranslate () {
-    console.log('translate');
+  function handleTranslate ( x: number, y: number, z: number ) {
+    setTranslation(pre => ({
+      x: pre.x + x,
+      y: pre.y + y,
+      z: pre.z + z,
+    }));
   }
 
   return <>
