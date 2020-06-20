@@ -16,7 +16,7 @@ interface IProps {
   handleRotate: (x: number, y: number) => void;
 }
 
-const ANGLE = 0.005;
+export const ANGLE = 0.005;
 
 export default function ControlRod ({ handleRotate, handleTranslate }: IProps) {
 

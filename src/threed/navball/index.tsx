@@ -19,12 +19,18 @@ import styles from './index.scss';
 const width = 200;
 const height = 200;
 
-export default function Navball () {
-  let camera: Camera;
-  let scene: Scene;
-  let renderer: Renderer;
-  let sphere: Mesh;
+interface IProps {
+  x: number;
+  y: number;
+  z: number;
+}
 
+let sphere: Mesh;
+let camera: Camera;
+let scene: Scene;
+let renderer: Renderer;
+
+export default function Navball ({ x, y, z }: IProps) {
   function initializeCanvas (): void {
     renderer = new WebGLRenderer( { antialias: true, alpha: true } );
 
@@ -57,7 +63,7 @@ export default function Navball () {
 
     sphere =  new Mesh( geometry, material );
     sphere.position.set( 0, 0, 0 );
-    sphere.rotation.set( Math.PI / 2, -Math.PI / 10, Math.PI / 1.8 );
+    sphere.rotation.set( x, y, z );
 
     return sphere;
   }
@@ -70,8 +76,8 @@ export default function Navball () {
     return light;
   }
 
-  const render = useCallback(() => {
-    requestAnimationFrame( render );
+  const render = useCallback(function renderCallback () {
+    requestAnimationFrame( renderCallback );
     renderer.render( scene, camera );
   }, []);
 
@@ -80,6 +86,12 @@ export default function Navball () {
     initializeScene();
     render();
   }, []);
+
+  useEffect(() => {
+    if ( sphere ) {
+      sphere.rotation.set( x, y, z );
+    }
+  });
 
   return <div id='navball-container' className={styles['navball-container']}></div>;
 }
