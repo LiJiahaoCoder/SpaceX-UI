@@ -24,10 +24,12 @@ let scene: Scene;
 let renderer: Renderer;
 let sphere: Mesh;
 
-export default function earth () {
+export default function earth (): Camera {
   initializeCanvas();
   initializeScene();
   animate();
+
+  return camera;
 }
 
 function initializeCanvas (): void {

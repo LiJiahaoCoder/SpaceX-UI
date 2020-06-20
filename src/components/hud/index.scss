@@ -6,6 +6,8 @@
   height: 650px;
   font-size: 18px;
   font-family: Lato, Verdana,Arial, geneva, sans-serif;
+  cursor: default;
+  user-select: none;
 
   .hud-ring {
     position: absolute;

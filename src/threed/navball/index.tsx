@@ -40,11 +40,11 @@ export default function Navball () {
     // create scene
     scene = new Scene();
 
-    scene.add( createEarth() );
+    scene.add( createNavball() );
     scene.add( createLight() );
   }
 
-  function createEarth (): Mesh {
+  function createNavball (): Mesh {
     // create texture
     const loader = new TextureLoader();
     const texture = loader.load(navballTexture);
