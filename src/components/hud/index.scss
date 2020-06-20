@@ -4,6 +4,8 @@
   @include center();
   width: 650px;
   height: 650px;
+  font-size: 18px;
+  font-family: Lato, Verdana,Arial, geneva, sans-serif;
 
   .hud-ring {
     position: absolute;
@@ -11,5 +13,39 @@
     top: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .rotation-label {
+    @include horizental-center();
+    font-size: 12px;
+    top: 25px;
+    color: rgb(204, 204, 204);
+    font-weight: lighter;
+  }
+
+  .rotation {
+    @include horizental-center();
+    top: 50px;
+    color: rgb(42, 255, 0);
+  }
+
+  .translation-label {
+    @include vertical-center();
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    left: 25px;
+    color: rgb(204, 204, 204);
+    font-weight: lighter;
+  }
+
+  .translation {
+    @include vertical-center();
+    display: flex;
+    flex-direction: column;
+    font-weight: lighter;
+    font-size: 14px;
+    left: 50px;
+    color: rgb(42, 255, 0);
   }
 }

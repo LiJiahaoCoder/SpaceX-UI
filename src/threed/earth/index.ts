@@ -68,7 +68,7 @@ function createEarth (): Mesh {
 }
 
 function createLight (): DirectionalLight {
-  const light = new DirectionalLight( 0xdddddd );
+  const light = new DirectionalLight( 0xaaaaaa );
   light.position.set( 1, 1, 1 ).normalize();
 
   return light;
