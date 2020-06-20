@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-export const UpArrow = memo(() => <svg width='400' height='240' viewBox='0 0 400 240'>
+export const RotateUpArrow = memo(() => <svg width='400' height='240' viewBox='0 0 400 240'>
 <title>Pitch Up</title>
 <defs>
   <radialGradient id='gradient-bg-pitch-up' cx='196' cy='25' r='745' gradientUnits='userSpaceOnUse'>
@@ -23,7 +23,7 @@ export const UpArrow = memo(() => <svg width='400' height='240' viewBox='0 0 400
 <path className='rate1' d='M199.68,120c-10.5,0-16.05,4.93-18.4,7.82a1.26,1.26,0,0,0,1,2h34.8a1.26,1.26,0,0,0,1-2C215.73,124.93,210.18,120,199.68,120Z'></path>
 </svg>);
 
-export const RightArrow = memo(() => <svg width='240' height='400' viewBox='0 0 240 400'>
+export const RotateRightArrow = memo(() => <svg width='240' height='400' viewBox='0 0 240 400'>
 <title>Yaw Right</title>
 <defs>
   <radialGradient id='gradient-bg-yaw-right' cx='-161.81' cy='-171.21' r='743.68' gradientUnits='userSpaceOnUse'>
@@ -48,7 +48,7 @@ export const RightArrow = memo(() => <svg width='240' height='400' viewBox='0 0 
 <path className='rate1' d='M120,199.68c0-10.5-4.93-16.05-7.82-18.4a1.26,1.26,0,0,0-2,1v34.8a1.26,1.26,0,0,0,2,1C115.07,215.73,120,210.18,120,199.68Z'></path>
 </svg>);
 
-export const DownArrow = memo(() => <svg width='400' height='240' viewBox='0 0 400 240'>
+export const RotateDownArrow = memo(() => <svg width='400' height='240' viewBox='0 0 400 240'>
 <title>Pitch Down</title>
 <defs>
   <radialGradient id='gradient-bg-pitch-down' cx='196' cy='-530' r='745' gradientUnits='userSpaceOnUse'>
@@ -73,7 +73,7 @@ export const DownArrow = memo(() => <svg width='400' height='240' viewBox='0 0 4
 <path className='rate1' d='M199.68,120c-10.5,0-16.05-4.93-18.4-7.82a1.26,1.26,0,0,1,1-2h34.8a1.26,1.26,0,0,1,1,2C215.73,115.07,210.18,120,199.68,120Z'></path>
 </svg>);
 
-export const LeftArrow = memo(() => <svg width='240' height='400' viewBox='0 0 240 400'>
+export const RotateLeftArrow = memo(() => <svg width='240' height='400' viewBox='0 0 240 400'>
 <title>Yaw Left</title>
 <defs>
   <radialGradient id='gradient-bg-yaw-left' cx='390' cy='-170' r='745' gradientUnits='userSpaceOnUse'>
@@ -96,4 +96,90 @@ export const LeftArrow = memo(() => <svg width='240' height='400' viewBox='0 0 2
 <path className='rate3' d='M149.59,200.32c0,10.5,4.93,16.05,7.82,18.4a1.26,1.26,0,0,0,2-1v-34.8a1.26,1.26,0,0,0-2-1C154.52,184.27,149.59,189.82,149.59,200.32Z'></path>
 <path className='rate2' d='M134.79,200.32c0,10.5,4.93,16.05,7.82,18.4a1.26,1.26,0,0,0,2-1v-34.8a1.26,1.26,0,0,0-2-1C139.72,184.27,134.79,189.82,134.79,200.32Z'></path>
 <path className='rate1' d='M120,200.32c0,10.5,4.93,16.05,7.82,18.4a1.26,1.26,0,0,0,2-1v-34.8a1.26,1.26,0,0,0-2-1C124.93,184.27,120,189.82,120,200.32Z'></path>
+</svg>);
+
+export const TransUpArrow = memo(() => <svg width='400' height='240' viewBox='0 0 400 240'>
+<title>Translate Up</title>
+<defs>
+  <radialGradient id='gradient-bg-translate-up' cx='196' cy='20' r='735' gradientUnits='userSpaceOnUse'>
+    <stop offset='0' stopColor='#5d707c'></stop>
+    <stop offset='0.25' stopColor='#546572'></stop>
+    <stop offset='0.75' stopColor='#29323a'></stop>
+    <stop offset='1' stopColor='#1d2328'></stop>
+  </radialGradient>
+  <linearGradient id='gradient-edge-translate-up' x1='200' y1='20' x2='200' y2='380' gradientUnits='userSpaceOnUse'>
+      <stop offset='0' stopColor='#fff'></stop>
+      <stop offset='0.5'></stop>
+      </linearGradient>
+</defs>
+<path className='bg' fill='url(#gradient-bg-translate-up)' d='M272.63,209.67c-40.11,12.09-105.15,12.09-145.27,0L27,187c-13.38-4-17.45-16.39-9.1-27.57L90.84,61.79c16.72-22.39,52.91-40.53,80.84-40.53h56.63c27.94,0,64.13,18.14,80.84,40.53l72.94,97.66c8.36,11.2,4.29,23.54-9.1,27.57Z'></path>
+<path className='tip' d='M273.18,33.25c-5.22,4.58-12.74,7.82-19,7.82H145.81c-6.26,0-13.77-3.24-19-7.82,14.69-7.4,30.82-12,44.86-12h56.64C242.36,21.26,258.49,25.85,273.18,33.25Z'></path>
+<path className='edge' fill='url(#gradient-edge-translate-up)' d='M21.37,184.52c-8.73-5.41-10.5-15.65-3.47-25.07L90.84,61.79c16.72-22.39,52.91-40.53,80.84-40.53h56.63c27.94,0,64.13,18.14,80.84,40.53l72.94,97.66c7,9.43,5.26,19.67-3.46,25.08l-69.48-93C292.44,69.11,256.25,51,228.31,51H171.68c-27.93,0-64.12,18.15-80.84,40.53Z'></path>
+<path className='fg' d='M117.4,124.77l78.2-41.63a10.07,10.07,0,0,1,8.8,0l78.2,41.63a1.27,1.27,0,0,1-1.1,2.28L200,93.56l-81.51,33.49A1.27,1.27,0,0,1,117.4,124.77Z'></path>
+</svg>);
+
+export const TransRightArrow = memo(() => <svg width='240' height='400' viewBox='0 0 240 400'>
+<title>Translate Right</title>
+<defs>
+  <radialGradient id='gradient-bg-translate-right' cx='-145' cy='-185' r='755' gradientUnits='userSpaceOnUse'>
+    <stop offset='0' stopColor='#5d707c'></stop>
+    <stop offset='0.25' stopColor='#546572'></stop>
+    <stop offset='0.75' stopColor='#29323a'></stop>
+    <stop offset='1' stopColor='#1d2328'></stop>
+  </radialGradient>
+  <linearGradient id='gradient-edge-translate-right' x1='135' y1='-155' x2='135' y2='550' gradientUnits='userSpaceOnUse'>
+    <stop offset='0' stopColor='#fff' stopOpacity='0'></stop>
+    <stop offset='0.35' stopColor='#fff' stopOpacity='0.5'></stop>
+    <stop offset='0.5' stopOpacity='0.5'></stop>
+    <stop offset='1' stopOpacity='0.5'></stop>
+  </linearGradient>
+</defs>
+<path className='bg' fill='url(#gradient-bg-translate-right)' d='M30.33,272.63c-12.09-40.11-12.09-105.15,0-145.27L53,21.94C57,8.56,69.37,4.5,80.55,12.85l97.66,78c22.38,16.72,40.53,52.91,40.53,80.84v56.64c0,27.93-18.14,64.12-40.53,80.83l-97.66,78c-11.2,8.36-23.54,4.29-27.57-9.1Z'></path>
+<path className='tip' d='M206.75,273.18c-4.58-5.22-7.82-12.74-7.82-19V145.81c0-6.26,3.24-13.77,7.82-19,7.4,14.69,12,30.82,12,44.86v56.64C218.74,242.36,214.15,258.49,206.75,273.18Z'></path>
+<path className='edge' fill='url(#gradient-edge-translate-right)' d='M55.48,16.31c5.41-8.72,15.65-10.49,25.07-3.46l97.66,78c22.38,16.72,40.53,52.91,40.53,80.84v56.64c0,27.93-18.14,64.12-40.53,80.83l-97.66,78c-9.43,7-19.67,5.26-25.08-3.46l93-74.54c22.39-16.71,40.53-52.9,40.53-80.83V171.68c0-27.93-18.15-64.12-40.53-80.84Z'></path>
+<path className='fg' d='M115.23,117.4l41.63,78.2a10.07,10.07,0,0,1,0,8.8l-41.63,78.2a1.27,1.27,0,0,1-2.28-1.1L146.44,200,113,118.5A1.27,1.27,0,0,1,115.23,117.4Z'></path>
+</svg>);
+
+export const TransDownArrow = memo(() => <svg width='400' height='240' viewBox='0 0 400 240'>
+<title>Translate Down</title>
+<defs>
+  <radialGradient id='gradient-bg-translate-down' cx='200' cy='-500' r='725' gradientUnits='userSpaceOnUse'>
+    <stop offset='0' stopColor='#5d707c'></stop>
+    <stop offset='0.25' stopColor='#546572'></stop>
+    <stop offset='0.75' stopColor='#29323a'></stop>
+    <stop offset='1' stopColor='#1d2328'></stop>
+  </radialGradient>
+  <linearGradient id='gradient-edge-translate-down' x1='200' y1='-500' x2='200' y2='185' gradientUnits='userSpaceOnUse'>
+    <stop offset='0' stopColor='#fff'></stop>
+    <stop offset='0.35' stopColor='#fff'></stop>
+    <stop offset='0.65' stopOpacity='0'></stop>
+    <stop offset='1'></stop>
+  </linearGradient>
+</defs>
+<path className='bg' fill='url(#gradient-bg-translate-down)' d='M272.63,30.33c-40.11-12.09-105.15-12.09-145.27,0L21.94,53C8.56,57,4.5,69.37,12.85,80.55l78,97.66c16.72,22.39,52.91,40.53,80.84,40.53h56.63c27.94,0,64.13-18.14,80.84-40.53l78-97.66c8.36-11.2,4.28-23.54-9.1-27.57Z'></path>
+<path className='tip' d='M273.18,206.75c-5.22-4.58-12.74-7.82-19-7.82H145.81c-6.26,0-13.77,3.24-19,7.82,14.69,7.4,30.82,12,44.86,12h56.64C242.36,218.74,258.49,214.15,273.18,206.75Z'></path>
+<path className='edge' fill='url(#gradient-edge-translate-down)' d='M16.31,55.48C7.58,60.89,5.82,71.13,12.85,80.55l78,97.66c16.72,22.39,52.91,40.53,80.84,40.53h56.63c27.94,0,64.13-18.14,80.84-40.53l78-97.66c7-9.43,5.26-19.67-3.47-25.08l-74.53,93C292.44,170.89,256.25,189,228.31,189H171.68c-27.93,0-64.12-18.15-80.84-40.53Z'></path>
+<path className='fg' d='M117.4,115.23l78.2,41.63a10.07,10.07,0,0,0,8.8,0l78.2-41.63a1.27,1.27,0,0,0-1.1-2.28L200,146.44,118.49,113A1.27,1.27,0,0,0,117.4,115.23Z'></path>
+</svg>);
+
+export const TransLeftArrow = memo(() => <svg width='240' height='400' viewBox='0 0 240 400'>
+<title>Translate Left</title>
+<defs>
+  <radialGradient id='gradient-bg-translate-left' cx='380' cy='-185' r='770' gradientUnits='userSpaceOnUse'>
+    <stop offset='0' stopColor='#5d707c'></stop>
+    <stop offset='0.25' stopColor='#546572'></stop>
+    <stop offset='0.75' stopColor='#29323a'></stop>
+    <stop offset='1' stopColor='#1d2328'></stop>
+  </radialGradient>
+  <linearGradient id='gradient-edge-translate-left' x1='100' y1='-155' x2='100' y2='550' gradientUnits='userSpaceOnUse'>
+    <stop offset='0' stopColor='#fff' stopOpacity='0'></stop>
+    <stop offset='0.35' stopColor='#fff' stopOpacity='0.5'></stop>
+    <stop offset='0.5' stopOpacity='0.5'></stop>
+    <stop offset='1' stopOpacity='0.5'></stop>
+  </linearGradient>
+</defs>
+<path className='bg' fill='url(#gradient-bg-translate-left)' d='M209.67,127.37c12.09,40.11,12.09,105.15,0,145.27L187,378.06c-4,13.38-16.39,17.44-27.57,9.09l-97.66-78c-22.38-16.72-40.53-52.91-40.53-80.84V171.68c0-27.93,18.14-64.12,40.53-80.83l97.66-78C170.65,4.49,183,8.56,187,22Z'></path>
+<path className='tip' d='M33.25,126.82c4.58,5.22,7.82,12.74,7.82,19V254.19c0,6.26-3.24,13.77-7.82,19-7.4-14.69-12-30.82-12-44.86V171.68C21.26,157.64,25.85,141.51,33.25,126.82Z'></path>
+<path className='edge' fill='url(#gradient-edge-translate-left)' d='M184.52,383.69c-5.41,8.72-15.65,10.49-25.07,3.46l-97.66-78c-22.38-16.72-40.53-52.91-40.53-80.84V171.68c0-27.93,18.14-64.12,40.53-80.83l97.66-78c9.43-7,19.67-5.26,25.08,3.46l-93,74.54C69.11,107.56,51,143.75,51,171.68v56.64c0,27.93,18.15,64.12,40.53,80.84Z'></path>
+<path className='fg' d='M124.77,281.34,83.14,205.67a10.09,10.09,0,0,1,0-8.81l41.63-78.2a1.27,1.27,0,0,1,2.28,1.1l-33.49,81.5,33.49,79A1.27,1.27,0,0,1,124.77,281.34Z'></path>
 </svg>);
