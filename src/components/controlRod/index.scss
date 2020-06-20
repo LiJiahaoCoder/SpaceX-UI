@@ -5,7 +5,6 @@
   bottom: 20px;
   width: 240px;
   height: 240px;
-  
 
   &.rotation-rod {
     right: 50px;
@@ -17,7 +16,6 @@
 
   .btn {
     cursor: pointer;
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,40 +33,20 @@
       height: 120px;
     }
     &.up {
-      left: 50%;
+      @include horizental-center();
       top: 0;
-      transform: translate(-50%);
-      -webkit-transform: translate(-50%);
-      -moz-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-      -o-transform: translate(-50%);
     }
     &.right {
-      top: 50%;
+      @include vertical-center();
       right: 0;
-      transform: translate(0, -50%);
-      -webkit-transform: translate(0, -50%);
-      -moz-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-      -o-transform: translate(0, -50%);
     }
     &.bottom {
+      @include horizental-center();
       bottom: 0;
-      left: 50%;
-      transform: translate(-50%);
-      -webkit-transform: translate(-50%);
-      -moz-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-      -o-transform: translate(-50%);
     }
     &.left {
-      top: 50%;
+      @include vertical-center();
       left: 0;
-      transform: translate(0, -50%);
-      -webkit-transform: translate(0, -50%);
-      -moz-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-      -o-transform: translate(0, -50%);
     }
   }
 
