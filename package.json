@@ -4,9 +4,9 @@
   "description": "Simulate SpaceX UI with React and ThreeJS",
   "main": "src/index.ts",
   "scripts": {
-    "clean": "rm -rf dist/ .cache/",
+    "clean": "rm -rf dist/ .cache/ build/",
     "start": "yarn clean && parcel src/index.html --open",
-    "build": "yarn clean && parcel build src/index.html",
+    "build": "yarn clean && parcel build src/index.html --out-dir build/",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
