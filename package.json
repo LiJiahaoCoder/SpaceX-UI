@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "clean": "rm -rf dist/ .cache/",
-    "start": "yarn clean && parcel src/index.html --open"
+    "start": "yarn clean && parcel src/index.html --open",
+    "build": "yarn clean && parcel build src/index.html"
   },
   "author": "Jiahao Li",
   "license": "ISC",
