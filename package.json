@@ -27,7 +27,7 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "three": "^0.117.1"
+    "three": "^0.137.0"
   },
   "homepage": "https://lijiahaocoder.github.io/SpaceX-UI/"
 }
